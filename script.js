@@ -19,6 +19,7 @@ const renderTodoList = () => {
 const addTodo = () => {
   todos.push({ id:count++, text:todoInput.value });
   todosContainer.innerHTML = renderTodoList();
+  scrollToLast();
   resetButton.disabled = false;
 };
 
@@ -36,6 +37,11 @@ const deleteTodo = (id) => {
     resetButton.disabled = true;
     count = 0;
   }
+}
+
+const scrollToLast = () => {
+  const todosList = document.querySelector('#todos-container > ul');
+  todosList.scrollTop = todosList.scrollHeight;
 }
 
 const validate = (el) => {
