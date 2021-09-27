@@ -1,0 +1,62 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  margin: 30px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+input, 
+#add-button,
+#reset-button {
+  padding: 4px 8px;
+  font-size: 1rem;
+}
+
+input {
+  width: 200px;
+}
+
+#todos-container > ul {
+  padding: 0;
+  margin: 10px 0;
+  list-style: none;
+  max-height: 200px;
+  width: fit-content;
+  overflow-y: auto;
+}
+
+#todos-container li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: #fff;
+  width: 300px;
+  box-shadow: 0 4px 4px -4px #aaa;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+#todos-container button {
+  padding: 0 3px;
+  line-height: 1;
+  max-height: 20px;
+  font-size: 1.125rem;
+  background: #ddd;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+#todos-container button:hover {
+  background: red;
+  color: white;
+}
