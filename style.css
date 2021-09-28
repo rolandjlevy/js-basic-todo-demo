@@ -3,7 +3,7 @@
 }
 
 body {
-  background: #ccc;
+  background: hsl(220, 20%, 80%);
   margin: 30px;
 }
 
@@ -41,7 +41,7 @@ input {
   padding: 8px;
   background-color: #fff;
   width: 300px;
-  box-shadow: 0 6px 6px -4px #666;
+  box-shadow: 0 6px 6px -4px hsla(220, 20%, 70%, 0.75);
   margin-bottom: 8px;
   border-radius: 4px;
 }
@@ -51,7 +51,7 @@ input {
   line-height: 1;
   max-height: 20px;
   font-size: 1.125rem;
-  background: #ddd;
+  background: hsl(220, 20%, 80%);
   border: none;
   transition: all 0.2s ease;
 }
