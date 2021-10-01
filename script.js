@@ -1,8 +1,5 @@
 // assign variables to DOM elements
-const todoInput = document.querySelector('#todo-input');
-const addButton = document.querySelector('#add-button');
-const resetButton = document.querySelector('#reset-button');
-const todosContainer = document.querySelector('#todos-container');
+const element = el => document.querySelector(el)
 
 // data for the todos
 let todos = [];
@@ -25,26 +22,26 @@ const renderTodoList = () => {
 
 // add a todo to the todo array then rerender the todos container
 const addTodo = () => {
-  todos.push({ id:count++, text:todoInput.value });
-  todosContainer.innerHTML = renderTodoList();
+  todos.push({ id:count++, text:element('#todo-input').value });
+  element('#todos-container').innerHTML = renderTodoList();
   scrollToLast();
-  resetButton.disabled = false;
+  element('#reset-button').disabled = false;
 };
 
 // Remove all of the todos then rerender
 const resetTodos = () => {
   todos = [];
-  todosContainer.innerHTML = renderTodoList();
-  resetButton.disabled = true;
+  element('#todos-container').innerHTML = renderTodoList();
+  element('#reset-button').disabled = true;
   count = 0;
 };
 
 // Delete a single todo then rerender
 const deleteTodo = (id) => {
   todos = todos.filter(item => item.id !== id);
-  todosContainer.innerHTML = renderTodoList();
+  element('#todos-container').innerHTML = renderTodoList();
   if (todos.length === 0) {
-    resetButton.disabled = true;
+    element('#reset-button').disabled = true;
     count = 0;
   }
 }
@@ -57,5 +54,5 @@ const scrollToLast = () => {
 
 // Enable or disable the add button
 const validate = (el) => {
-  addButton.disabled = el.value.length === 0;
+  element('#add-button').disabled = el.value.length === 0;
 }
