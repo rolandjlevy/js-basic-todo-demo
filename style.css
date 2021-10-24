@@ -26,7 +26,7 @@ input {
   width: 200px;
 }
 
-#todos-container > ul {
+#container > ul {
   padding: 0;
   margin: 10px 0;
   list-style: none;
@@ -35,7 +35,7 @@ input {
   overflow-y: auto;
 }
 
-#todos-container li {
+#container li {
   display: flex;
   justify-content: space-between;
   padding: 8px;
@@ -46,7 +46,7 @@ input {
   border-radius: 4px;
 }
 
-#todos-container button {
+#container button {
   padding: 0 3px;
   line-height: 1;
   max-height: 20px;
@@ -56,7 +56,7 @@ input {
   transition: all 0.2s ease;
 }
 
-#todos-container button:hover {
+#container button:hover {
   background: red;
   color: white;
 }
