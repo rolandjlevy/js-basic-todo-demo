@@ -20,8 +20,7 @@ const deleteTodo = (id) => {
 
 const renderTodoList = () => {
   return '<ul>\n' + todos.map((item, index) => {
-    const deleteBtn = `<button onclick="deleteTodo(${item.id})">×</button>`;
-    return `<li><span><b>${Number(item.id + 1)}</b>. ${item.text}</span>${deleteBtn}</li>`;
+    return `<li><span><b>${Number(item.id + 1)}</b>. ${item.text}</span><button onclick="deleteTodo(${item.id})">×</button></li>`;
   }).join(''); + '\n</ul>';
 }
 
