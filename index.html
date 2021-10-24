@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Minimal todo demo</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h3>Basic todo demo</h3>
-    <input id="todo-input" onkeyup="validate(this)" placeholder="New item..." />
+    <h3>Minimal todo demo</h3>
+    <input id="todo-input" oninput="validate(this)" placeholder="New item..." />
     <button id="add-button" onclick="addTodo()" disabled>Add</button>
     <button id="reset-button" onclick="deleteTodo('all')" disabled>Reset</button>
     <section id="todos-container"></section>
