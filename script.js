@@ -15,29 +15,19 @@ const renderTodoList = () => {
 const addTodo = () => {
   todos.push({ id:count++, text:el('#todo-input').value });
   el('#todos-container').innerHTML = renderTodoList();
-  scrollToLast();
+  const todosList = el('#todos-container > ul');
+  todosList.scrollTop = todosList.scrollHeight;
   el('#reset-button').disabled = false;
 };
 
-const resetTodos = () => {
-  todos = [];
-  el('#todos-container').innerHTML = renderTodoList();
-  el('#reset-button').disabled = true;
-  count = 0;
-};
-
 const deleteTodo = (id) => {
-  todos = todos.filter(item => item.id !== id);
+  todos = id === 'all' ? [] : todos.filter(item => item.id !== id);
+  console.log(todos)
   el('#todos-container').innerHTML = renderTodoList();
   if (todos.length === 0) {
     el('#reset-button').disabled = true;
     count = 0;
   }
-}
-
-const scrollToLast = () => {
-  const todosList = el('#todos-container > ul');
-  todosList.scrollTop = todosList.scrollHeight;
 }
 
 const validate = (element) => {
