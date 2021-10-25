@@ -20,6 +20,7 @@ input,
 #reset-button {
   padding: 4px 8px;
   font-size: 1rem;
+  border: 1px solid #bbb;
 }
 
 input {
@@ -30,33 +31,39 @@ input {
   padding: 0;
   margin: 10px 0;
   list-style: none;
-  max-height: 200px;
+  max-height: 400px;
   width: fit-content;
   overflow-y: auto;
 }
 
 #container li {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
   padding: 8px;
   background-color: #fff;
-  width: 300px;
+  width: fit-content;
   box-shadow: 0 6px 6px -4px hsla(220, 20%, 70%, 0.75);
   margin-bottom: 8px;
   border-radius: 4px;
 }
 
-#container button {
-  padding: 0 3px;
+#container li > button {
+  padding: 0;
+  margin: 0;
   line-height: 1;
   max-height: 20px;
   font-size: 1.125rem;
-  background: hsl(220, 20%, 80%);
+  background: none;
   border: none;
+  opacity: 0.75;
   transition: all 0.2s ease;
 }
 
-#container button:hover {
-  background: red;
-  color: white;
+#container li > *:not(:last-child) {
+  margin-right: 10px;
+}
+
+#container li > button:hover {
+  opacity: 1;
 }
