@@ -7,11 +7,17 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h3>Minimal todo demo</h3>
-    <input id="todo-input" oninput="validateAdd(this)" placeholder="New item..." />
-    <button id="add-button" onclick="addTodo()" disabled>Add</button>
-    <button id="reset-button" onclick="deleteTodo('all')" disabled>Reset</button>
-    <section id="container"></section>
+    <main>
+      <header>
+        <h3>Minimal todo demo</h3>
+      </header>
+      <section>
+        <input id="todo-input" oninput="validateAdd(this)" placeholder="New item..." />
+        <button id="add-button" onclick="addTodo()" disabled>Add</button>
+        <button id="reset-button" onclick="deleteTodo('all')" disabled>Reset</button>
+      </section>
+      <section id="container"></section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
