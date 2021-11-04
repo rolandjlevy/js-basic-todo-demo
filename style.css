@@ -1,18 +1,31 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Mija, Roboto, Droid Serif, Arial, Helvetica, sans-serif;
 }
 
 body {
-  background: hsl(220, 20%, 80%);
+  background: hsl(188, 70%, 45%);
+  background: linear-gradient(0deg, hsl(188, 70%, 45%) 0%, hsl(56, 100%, 83%) 100%);
   margin: 30px;
+}
+
+main {
+  height: calc(100vh - 60px);
+}
+
+h2 {
+  font-family: 'Cabin', sans-serif;
+  color: hsl(188, 70%, 15%);
 }
 
 button {
   cursor: pointer;
+  background: hsl(188, 70%, 45%);
+  color: white;
 }
 
 button:disabled {
   cursor: not-allowed;
+  opacity: 0.5;
 }
 
 input, 
@@ -28,7 +41,7 @@ input {
 }
 
 #container > ul {
-  padding: 0;
+  padding: 0 10px 0 0;
   margin: 10px 0;
   list-style: none;
   max-height: 400px;
