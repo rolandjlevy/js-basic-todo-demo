@@ -17,15 +17,23 @@ h2 {
   color: hsl(188, 70%, 15%);
 }
 
-button {
+#add > button {
   cursor: pointer;
   background: hsl(188, 70%, 45%);
   color: white;
 }
 
-button:disabled {
+#container li > button:disabled,
+#add > button:disabled {
   cursor: not-allowed;
+}
+
+#add > button:disabled {
   opacity: 0.5;
+}
+
+#container li > button:disabled {
+  opacity: 1;
 }
 
 input, 
@@ -69,14 +77,14 @@ input {
   font-size: 1.125rem;
   background: none;
   border: none;
-  opacity: 0.75;
   transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+#container li > button:hover:not(:disabled) {
+  opacity: 1;
 }
 
 #container li > *:not(:last-child) {
   margin-right: 10px;
-}
-
-#container li > button:hover {
-  opacity: 1;
 }
