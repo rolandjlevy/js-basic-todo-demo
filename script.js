@@ -1,8 +1,9 @@
 const el = element => document.querySelector(element);
-let todos = [], count = 0;
+let todos = [];
+let count = 0;
 
 const addTodo = () => {
-  todos.push({ id:count++, text:el('#todo-input').value });
+  todos.push({ id: count++, text: el('#todo-input').value });
   el('#container').innerHTML = renderTodos();
   el('#container > ul').scrollTop = el('#container > ul').scrollHeight;
   el('#reset-button').disabled = false;

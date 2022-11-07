@@ -14,7 +14,7 @@ main {
 
 h2 {
   font-family: 'Cabin', sans-serif;
-  color: hsl(188, 70%, 15%);
+  color: hsl(188, 70%, 5%);
 }
 
 #add > button {
